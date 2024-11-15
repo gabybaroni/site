@@ -1,0 +1,126 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Menu de navegação */
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 1.5rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #ddd;
+}
+
+/* Menu hambúrguer */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.bar {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #4CAF50;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-list {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 1rem 0;
+    }
+}
+
+/* Seções */
+.section {
+    padding: 2rem 10%;
+    text-align: center;
+}
+
+#sobre {
+    background: #f4f4f4;
+}
+
+#projetos {
+    background: #e8f5e9;
+}
+
+#contato {
+    background: #f4f4f4;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
